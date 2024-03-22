@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Button = ({ title }) => <StyledButton>{title}</StyledButton>;
+export const Button = ({ title }) => (
+  <div style={{ width: "170px", height: "47px", marginRight: "32px" }}>
+    <StyledButton>{title}</StyledButton>
+  </div>
+);
 
 const StyledButton = styled.button`
   font-family: "Poppins";
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32px;
-  width: 170px;
-  height: 47px;
+  width: 100%;
+  height: 100%;
   background-color: #121212;
   color: #34c94b;
   padding: 10px 16px;

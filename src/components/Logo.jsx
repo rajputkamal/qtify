@@ -10,4 +10,5 @@ export const Logo = () => (
 
 const StyledLogo = styled.div`
   padding-left: 32px;
+  cursor: pointer;
 `;
