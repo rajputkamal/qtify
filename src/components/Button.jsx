@@ -4,9 +4,11 @@ import styled from "styled-components";
 export const Button = ({ title }) => <StyledButton>{title}</StyledButton>;
 
 const StyledButton = styled.button`
+  font-family: "Poppins";
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 32px;
   width: 170px;
   height: 47px;
   background-color: #121212;
@@ -18,4 +20,7 @@ const StyledButton = styled.button`
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0.25px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
