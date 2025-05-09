@@ -16,25 +16,22 @@ const NavBar = ({ data, logo = false, search = false, feedback = false }) => {
   //   };
   return (
     <div className={styles.wrapper}>
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} data-testid="navbar">
         <div className={styles.logoWrapper} onClick={() => navigate(`/`)}>
           {logo ? <Logo id={styles.logo} /> : null}
         </div>
         {search ? (
           <div className={styles.searchWrapper}>
-            <SearchBar
-              placeholder="Search a album of your choice"
-              data={data}
-            />
+            <SearchBar placeholder="Search a song of your choice" data={data} />
           </div>
         ) : null}
         {feedback ? (
-          <div
+          <button
             className={styles.nav_link}
             onClick={() => toggleFeedBackModal(true)}
           >
-            Feedback
-          </div>
+            Give Feedback
+          </button>
         ) : null}
       </nav>
       <FeedBackModal
